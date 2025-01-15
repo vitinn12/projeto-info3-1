@@ -1,61 +1,101 @@
+:root {
+  --azul: #00214d;
+}
+
 * {
   box-sizing: border-box;
+
 }
 
 body {
-    line-height: 1.5;
-    background-color: white;
-    color: black;
-  }
+  line-height: 1.5;
+  background-color: white;
+  color: black;
+  padding: 0;
+  margin: 0;
+}
 
 .site-header {
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #00214d;
-    color: white;
-    padding: 20px;
-    position: relative;
-  }
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--azul);
+  color: white;
+  padding: 20px;
+}
 
 .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 0px;
+  display: flex;
+  align-items: center;
+  gap: 0px;
 }
 
 .logo {
-    width: 100px; 
-    height: auto; 
+  width: 100px;
+  height: auto;
+}
+
+.site-body {
+  width: 100%;
+  margin: 30px;
+}
+
+.site-body section {
+  width: 80%;
 }
 
 .site-name {
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 28px; 
-    color: white;
-    margin: 0; 
-    margin-top: 4px;
-  }
-
-.nav-container {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 28px;
+  color: white;
+  margin: 0;
+  margin-top: 4px;
 }
 
-.nav-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 15px;
-  }
+.nav-container {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
 
-.nav-list a {
-    color: white;
-    text-decoration: none;
-  }
+.barra input {
+  width: 500px;
+  height: 50px;
+  border-radius: 8px;
+  padding: 10px;
+  transition: 0.7s all;
+}
 
-.nav-list a:hover {
-    text-decoration: underline;
+.barra input:focus {
+  width: 700px;
+  transition: 0.7s all;
+}
+
+.login {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.login a,
+.login i {
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.login .fa-user {
+  font-size: 20px;
+  background-color: #08346d;
+  width: 30px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width:500px) {
+  .barra {
+    display: none;
   }
+}
