@@ -84,6 +84,11 @@ body {
   place-items: center;
   text-decoration: none;
   color: white;
+  font-weight: bold;
+}
+.login a:hover {
+  transition: 0.6 all;
+  text-decoration: underline;
 }
 
 .login .fa-user {
