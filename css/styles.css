@@ -19,7 +19,7 @@ body {
   height: 100px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   background-color: var(--azul);
   color: white;
   padding: 20px;
@@ -32,8 +32,8 @@ body {
 }
 
 .logo {
-  width: 100px;
-  height: auto;
+  width: 95px;
+  object-fit: contain;
 }
 
 .site-body {

@@ -2,9 +2,23 @@
     --azul: #00214d;
   }
 
+* {
+    box-sizing: border-box;
+  }
 body {
+    line-height: 1.5;
+    background-color: white;
+    color: black;
+    padding: 0;
+    margin: 0;
+  }
+.login,
+.barra{
+    opacity: 0;
+}
+.container {
     font-family: Arial, sans-serif;
-    background-color: var(--azul);
+    background-color: #f3f3f3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,22 +51,21 @@ body {
 .cadastrar-button {
     width: 100%;
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: var(--azul);
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    transition: 0.4s all;
 }
-.login-button:hover {
-    background-color: #45a049;
+.login-button:hover,
+.cadastrar-button:hover {
+    transition: 0.4s all;
+    scale: 1.04;
 }
 .error-message {
     color: red;
     font-size: 14px;
     text-align: center;
-}
-
-.img-logo h1{
-    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
