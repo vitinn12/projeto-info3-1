@@ -13,6 +13,7 @@ body {
   color: black;
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 
 .site-header {
@@ -59,6 +60,31 @@ body {
   transform: translate(-50%);
 }
 
+.barra {
+  position: relative; 
+  display: inline-block;
+}
+
+.search-bar {
+  width: 500px;
+  height: 50px;
+  padding: 10px;
+  padding-right: 40px; 
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%; 
+  right: 15px; 
+  transform: translateY(-50%);
+  font-size: 20px; 
+  color: #00214d; 
+}
+
 .barra input {
   width: 500px;
   height: 50px;
@@ -74,8 +100,15 @@ body {
 
 .login {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: start;
   gap: 10px;
+}
+
+.login-main {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .login a,
@@ -94,9 +127,14 @@ body {
 .login .fa-user {
   font-size: 20px;
   background-color: #08346d;
-  width: 30px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+}
+
+.login a:last-child {
+  align-self: flex-end; 
+    margin: auto; 
 }
 
 @media screen and (max-width:500px) {
