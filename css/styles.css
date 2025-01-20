@@ -4,20 +4,23 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   line-height: 1.5;
   background-color: white;
   color: black;
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
 }
 
-.site-header {
-  height: 100px;
+header{
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -38,15 +41,17 @@ body {
 }
 
 .site-body {
-  width: 100%;
-  margin: 30px;
-}
-
-.site-body section {
   width: 80%;
 }
 
-.site-name {
+section {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.texto-logo{
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-size: 28px;
   color: white;
@@ -86,17 +91,13 @@ body {
 }
 
 .barra input {
-  width: 500px;
+  width: 700px;
   height: 50px;
   border-radius: 8px;
   padding: 10px;
   transition: 0.7s all;
 }
 
-.barra input:focus {
-  width: 700px;
-  transition: 0.7s all;
-}
 
 .login {
   display: flex;
@@ -151,16 +152,17 @@ body {
 }
 
 .submenu {
+  display: flex;
+  justify-content: center;
   background-color: white; 
   padding: 10px 0;
-  margin-top: -10px; 
   border-bottom: 2px solid #ccc; 
 } 
 
 .submenu-list {
+  width:1300px;
   display: flex;
-  justify-content: center; 
-  gap: 20px; 
+  justify-content: space-evenly; 
   list-style: none; 
   margin: 0;
   padding: 0;
@@ -178,18 +180,99 @@ body {
   color: #08346d; 
 }
 
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-  margin-top: 20px;
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container main {
+  width: 59%;
+}
+.cards {
+  display: flex;
+  gap: 20px;
 }
 
-image-placeholder {
+.card {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid #bebebe;
+  border-radius: 10px;
+  padding: 15px;
+  gap: 10px;
+  transition: 0.5s all;
+}
+.card:hover {
+  transition: 0.5s all;
+  scale: 1.05;
+}
+.card h3 {
+  width: 180px;
+  height: auto;
+  text-align: center;
+}
+.card img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+.card a{
+  border-radius: 7px;
+  display: grid;
+  place-items: center;
+  width: 50%;
+  height: 40px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+.imagem {
+  width: 80%;
+  background-color: #919191;
+  height: 400px;
+  margin: 100px;
+}
+.card > h4 {
+  display: flex;
+  gap: 10px;
+  font-weight: 100;
+  align-items: center;
+}
+.risco{
+  text-decoration: line-through;
+}
+.texto-tam {
+  font-size: 1.2rem;
+}
+
+
+.image-placeholder {
   width: 100%;
   aspect-ratio: 1; 
   background-color: #ccc; 
   border-radius: 8px; 
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+footer {
+  height: 150px;
+  background-color: var(--azul);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+}
+.icons {
+  display: flex;
+  gap: 9px;
+}
+.icons i {
+  font-size: 25px;
 }
 
 @media screen and (max-width:500px) {
