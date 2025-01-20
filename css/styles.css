@@ -102,13 +102,20 @@ body {
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 10px;
 }
 
 .login-main {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
+}
+
+.meus-pedidos {
+  margin-left: 28px; 
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  align-self: flex-start;
 }
 
 .login a,
@@ -124,12 +131,18 @@ body {
   text-decoration: underline;
 }
 
-.login .fa-user {
+.fa-user {
   font-size: 20px;
   background-color: #08346d;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
+  position: relative;
+  top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
 }
 
 .login a:last-child {
@@ -137,8 +150,50 @@ body {
     margin: auto; 
 }
 
+.submenu {
+  background-color: white; 
+  padding: 10px 0;
+  margin-top: -10px; 
+  border-bottom: 2px solid #ccc; 
+} 
+
+.submenu-list {
+  display: flex;
+  justify-content: center; 
+  gap: 20px; 
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+}
+
+.submenu-list li a {
+  text-decoration: none; 
+  color: #000;
+  font-size: 14px; 
+  font-weight: bold; 
+  transition: color 0.3s;
+}
+
+.submenu-list li a:hover {
+  color: #08346d; 
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  margin-top: 20px;
+}
+
+image-placeholder {
+  width: 100%;
+  aspect-ratio: 1; 
+  background-color: #ccc; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
 @media screen and (max-width:500px) {
   .barra {
-    display: none;
+      display: none;
   }
 }
