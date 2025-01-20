@@ -192,11 +192,12 @@ section {
 }
 .cards {
   display: flex;
+  flex-wrap:wrap;
   gap: 20px;
 }
 
 .card {
-  width: 80%;
+  width: 23%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -217,15 +218,15 @@ section {
   text-align: center;
 }
 .card img {
-  width: 200px;
-  height: 200px;
+  width: 70%;
+  height: 50%;
   object-fit: contain;
 }
 .card a{
   border-radius: 7px;
   display: grid;
   place-items: center;
-  width: 50%;
+  width: 100%;
   height: 40px;
   background-color: black;
   color: white;
@@ -275,8 +276,27 @@ footer {
   font-size: 25px;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:1300px) {
   .barra {
       display: none;
+  }
+  .card h3 {
+    width: 100px;
+  }
+  .card h3,
+  .card h4 p {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width:490px) {
+  .barra {
+      display: none;
+  }
+  .card h3 {
+    width: 100px;
+  }
+  .card h3,
+  .card h4 p {
+    font-size: 12px;
   }
 }
