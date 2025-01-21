@@ -209,7 +209,7 @@ header{
 }
 .card:hover {
   transition: 0.5s all;
-  scale: 1.05;
+  transform: scale(1.05);
 }
 .card h3 {
   width: 180px;

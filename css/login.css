@@ -76,8 +76,15 @@ body {
     transition: 0.4s all;
     scale: 1.04;
 }
-.error-message {
-    color: red;
-    font-size: 14px;
-    text-align: center;
+@media screen and (max-width:490px) {
+    .logo-container h1 {
+        display: block;
+        width: 100px;
+      }
+    .login-container {
+        width: 80%; 
+    }
+      
 }
+
+
